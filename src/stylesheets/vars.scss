@@ -1,0 +1,8 @@
+$max-width: 1140px;
+
+$breakpoints: (
+        1920: "screen and (max-width: 1920px)",
+        1240: "screen and (max-width: 1240px)",
+        480: "screen and (max-width: 480px)",
+        320: "screen and (max-width: 320px)",
+);
