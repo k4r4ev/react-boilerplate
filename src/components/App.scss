@@ -1,5 +1,12 @@
-@import '../stylesheets/mixins.scss';
-@import '../stylesheets/reset.scss';
-@import '../stylesheets/vars.scss';
-@import '../stylesheets/globals.scss';
-@import '../stylesheets/fonts.scss';
+//@import '../stylesheets/mixins.scss';
+//@import '../stylesheets/reset.scss';
+//@import '../stylesheets/vars.scss';
+//@import '../stylesheets/globals.scss';
+//@import '../stylesheets/fonts.scss';
+
+.app {
+    &-article {
+        display: flex;
+        flex-direction: row;
+    }
+}

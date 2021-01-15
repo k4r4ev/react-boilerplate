@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { default: webpack } = require('webpack');
 
 module.exports = {
   entry: './src/index.jsx',
@@ -7,27 +8,26 @@ module.exports = {
     path: path.join(__dirname, '/dist'),
     filename: 'index-bundle.js',
   },
+  devtool: 'source-map',
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
-        exclude: /node_modules/,
-        use: ['babel-loader'],
-      },
-      {
-        test: /\.js|\.jsx$/,
+        test: /\.(tsx|js|jsx|ts)$/,
         exclude: /node_modules/,
         use: ['babel-loader'],
       },
       {
         test: /\.(s*)css$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        exclude: /node_modules/,
+        include: path.appSrc,
+        use: ['style-loader', 'css-loader', 'resolve-url-loader', 'sass-loader'],
       },
       {
-        test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+        test: /\.(ttf|eot|woff|woff2|svg)$/,
         loader: 'file-loader',
         options: {
           name: '[name].[ext]',
+          outputPath: 'fonts/',
         },
       },
       {
