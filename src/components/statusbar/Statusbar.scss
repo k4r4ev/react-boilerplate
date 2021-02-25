@@ -1,5 +1,9 @@
 .statusbar {
   width: 100%;
   background-color: #46A0E4;
-  min-height: 20px;
+  min-height: 25px;
+
+  &__text {
+    @include font('Arial', $white-text, 16px, 16px);
+  }
 }

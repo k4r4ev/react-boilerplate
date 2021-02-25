@@ -1,12 +1,13 @@
 .structure {
-  width: 25%;
+  width: 300px;
   background-color: $sidebar-background;
   height: calc(100vh - 70px);
   border-right: 1px solid $sidebar-border;
   padding-top: 15px;
-  padding-left: 20px;
 
   &-title {
+    padding-left: 20px;
+    padding-bottom: 20px;
     @include font('Arial', $black-text, 18px, 18px, bold);
   }
 }

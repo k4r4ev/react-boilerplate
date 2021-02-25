@@ -8,6 +8,8 @@
     "allowJs": true,
     "removeComments": true,
     "sourceMap": true,
-    "allowSyntheticDefaultImports": true
+    "baseUrl": "./src",
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node"
   }
 }

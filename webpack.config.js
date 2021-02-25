@@ -1,6 +1,5 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { default: webpack } = require('webpack');
 
 module.exports = {
   entry: './src/index.jsx',
@@ -9,6 +8,9 @@ module.exports = {
     filename: 'index-bundle.js',
   },
   devtool: 'source-map',
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
+  },
   module: {
     rules: [
       {
