@@ -21,7 +21,6 @@ module.exports = {
       {
         test: /\.(s*)css$/,
         exclude: /node_modules/,
-        include: path.appSrc,
         use: ['style-loader', 'css-loader', 'resolve-url-loader', 'sass-loader'],
       },
       {

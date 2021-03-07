@@ -3,6 +3,10 @@
   background-color: #46A0E4;
   min-height: 25px;
 
+  @include breakpoint(1240){
+    display: none;
+  }
+
   &__text {
     @include font('Arial', $white-text, 16px, 16px);
   }
